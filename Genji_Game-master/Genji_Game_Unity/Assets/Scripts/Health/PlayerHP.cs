@@ -38,24 +38,30 @@ public class PlayerHP : MonoBehaviour
         CurrentCheckpoint = PlayerPrefs.GetInt("checkpoint");
         animScript = this.GetComponent<AnimationScript>();
         animScript.currentHealth = _currentHealth;
-        Debug.Log(CurrentCheckpoint + " IS current checkpoint");
         if (Checkpoints[CurrentCheckpoint])
         {
             Player.transform.position = Checkpoints[CurrentCheckpoint].transform.position;
             Camera.transform.position = new Vector3(Checkpoints[CurrentCheckpoint].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 16, Checkpoints[CurrentCheckpoint].transform.position.z - 8f);
-            Debug.Log(this.transform.position.x + " " + this.transform.position.y + " " + this.transform.position.z);
         }
         else
         {
             Player.transform.position = Checkpoints[0].transform.position;
             Camera.transform.position = new Vector3(Checkpoints[0].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 16, Checkpoints[0].transform.position.z);
-            Debug.Log(this.transform.position.x + " " + this.transform.position.y + " " + this.transform.position.z);
         }
     }
 
     void Update()
     {
         animScript.currentHealth = _currentHealth;
+        if (Input.GetKeyDown(KeyCode.R) && _currentHealth > 0)
+        {
+            PlayerPrefs.SetInt("checkpoint", 0);
+            SceneManager.LoadScene(RestartScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && _currentHealth > 0)
+        {
+            SceneManager.LoadScene("_Main_Menu");
+        }
     }
 
     public void DealDamage(int damage)
