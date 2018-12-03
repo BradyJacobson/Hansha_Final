@@ -6,6 +6,8 @@ public class CheckPointInteraction : MonoBehaviour
 {
     public GameObject Player;
     public int Order;
+    public AudioSource activationSound;
+
     private bool activated;
 
     void Start()
@@ -20,6 +22,7 @@ public class CheckPointInteraction : MonoBehaviour
             Debug.Log("SET " + Order);
             PlayerPrefs.SetInt("checkpoint", Order);
             activated = true;
+            activationSound.Play();
         }
     }
 }
