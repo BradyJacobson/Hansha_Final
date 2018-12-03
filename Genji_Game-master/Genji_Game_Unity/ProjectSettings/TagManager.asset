@@ -7,6 +7,8 @@ TagManager:
   - Projectile
   - Enemy
   - Deflect
+  - Boss
+  - Boss_Cannon
   layers:
   - Default
   - TransparentFX

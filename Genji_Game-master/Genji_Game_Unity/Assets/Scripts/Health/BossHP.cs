@@ -18,9 +18,6 @@ public class BossHP : MonoBehaviour
     public int _currentHealth;
     private bool _canTakeDamage = true;
 
-    [Header("UI Properties")]
-    public GameObject Health;
-
     public void Start()
     {
         health1.SetActive(true);
@@ -40,13 +37,11 @@ public class BossHP : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            Destroy(Health);
             PlayerDeath();
             _currentHealth = 0;
         }
         else
         {
-            Health.transform.localScale += new Vector3(minus, 0, 0);
             if(_currentHealth <= 20)
             {
                 health1.SetActive(false);

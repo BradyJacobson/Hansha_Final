@@ -51,6 +51,8 @@ public class Player_Slash : MonoBehaviour
             animScript.animScriptIsSwinging = this.isSwinging;
             frontBoxCollider.transform.position = player.transform.position;
             StartCoroutine(SwingTime());
+            GameObject.Find("Swing_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
+
         }
 
         if (isSwinging)

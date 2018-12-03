@@ -41,6 +41,7 @@ namespace TopDown
             _groundPlane = new Plane(Vector3.up, this.transform.position);
             //DistanceTraveled = 10f;
             //DistanceAvailable = 20f;
+            Player = GameObject.FindWithTag("Player");
         }
 
         private void Update()

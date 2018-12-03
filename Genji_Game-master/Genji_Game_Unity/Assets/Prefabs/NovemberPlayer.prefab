@@ -1320,7 +1320,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268330395901572}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.0004, y: 0, z: 0.025}
+  m_LocalPosition: {x: 0.0004, y: 0, z: 0.0662}
   m_LocalScale: {x: 0.02, y: 0.0102212, z: 0.04}
   m_Children: []
   m_Father: {fileID: 4374736060706638}
@@ -1753,7 +1753,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1.6}
+  m_Size: {x: 2.5, y: 2, z: 1.6}
   m_Center: {x: 0, y: 0, z: 0.7}
 --- !u!95 &95191321787058000
 Animator:
@@ -1871,7 +1871,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _currentHealth: 0
   InvincibilityTime: 0
-  DeathAnimTime: 0
+  DeathAnimTime: 3
   Health3: {fileID: 0}
   Health2: {fileID: 0}
   Health1: {fileID: 0}

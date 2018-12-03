@@ -22,7 +22,9 @@ public class TopDownCameraFollow : MonoBehaviour {
 
     void Start () 
     {
-        _Offset = this.transform.position - followTransform.position;     
+        _Offset = this.transform.position - followTransform.position;
+
+        followTransform = GameObject.FindWithTag("Player").transform;
 
         if (startDelay != 0f) 
         {

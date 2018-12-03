@@ -30,25 +30,20 @@ public class Projectile_Direct : Projectile
     {
         if (collision.gameObject.tag == "Deflect")
         {
-            Debug.Log("A");
-            Vector3 v = Vector3.Reflect(transform.forward, collision.contacts[0].normal);
-            float rot = 90 - Mathf.Atan2(v.z, v.x) * Mathf.Rad2Deg;
-            transform.eulerAngles = new Vector3(0, rot, 0);
+            this.transform.forward = -this.transform.forward;
 
             //Play sound
             GameObject.Find("Deflect_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
         }
         else if (collision.gameObject.tag != "Projectile")
         {
-            Debug.Log("b");
             if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
             {
-                Debug.Log("OUCHIE");
-              //  GameObject.Find("Damage_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
+                GameObject.Find("Damage_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
             }
             else
             {
-           //     GameObject.Find("Impact_Sounds").GetComponent<AudioSource>().Play();
+                GameObject.Find("Impact_Sounds").GetComponent<AudioSource>().Play();
             }
             collision.gameObject.SendMessageUpwards(damageFunctionName, damageAmount, SendMessageOptions.DontRequireReceiver);
             Destroy(this.gameObject);

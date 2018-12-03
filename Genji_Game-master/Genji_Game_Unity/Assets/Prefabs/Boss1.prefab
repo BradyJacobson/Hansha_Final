@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 114733051641618074}
   m_Layer: 0
   m_Name: Guns (5)
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,23 @@ GameObject:
   - component: {fileID: 4916557996126164}
   m_Layer: 0
   m_Name: polySurface25
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1104604647579724
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4579048235348702}
+  - component: {fileID: 33838370897899712}
+  - component: {fileID: 23423898673344838}
+  m_Layer: 0
+  m_Name: Stage_Three_Shadow_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,7 +259,7 @@ GameObject:
   - component: {fileID: 65521411456127784}
   m_Layer: 0
   m_Name: Boss1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,7 +391,7 @@ GameObject:
   - component: {fileID: 114283708046873720}
   m_Layer: 0
   m_Name: Guns (3)
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -827,7 +844,7 @@ GameObject:
   - component: {fileID: 114265349186088620}
   m_Layer: 0
   m_Name: Guns (1)
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -956,7 +973,7 @@ GameObject:
   - component: {fileID: 114964856367988642}
   m_Layer: 0
   m_Name: Guns (4)
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,7 +1213,7 @@ GameObject:
   - component: {fileID: 114528597805083966}
   m_Layer: 0
   m_Name: Guns
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,7 +1261,7 @@ GameObject:
   - component: {fileID: 114231309154737606}
   m_Layer: 0
   m_Name: Guns (2)
-  m_TagString: Untagged
+  m_TagString: Boss_Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1645,6 +1662,7 @@ Transform:
   - {fileID: 4095091732622998}
   - {fileID: 4752025677819792}
   - {fileID: 4945813308265570}
+  - {fileID: 4579048235348702}
   m_Father: {fileID: 4659445202248518}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -1922,6 +1940,19 @@ Transform:
   - {fileID: 4939494699615678}
   m_Father: {fileID: 4826302854417422}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4579048235348702
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104604647579724}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.003, y: -0.045, z: -0.002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4298154424151386}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4583639573413066
 Transform:
@@ -2897,6 +2928,41 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: f73b73f3158917a49962f78275362cac, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23423898673344838
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104604647579724}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 80fe321fb33f0f446bd22bc52b1951ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3938,6 +4004,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1751141005478048}
   m_Mesh: {fileID: 4300010, guid: 0c3eabf8c13573741bc40bcedcbc1a8d, type: 3}
+--- !u!33 &33838370897899712
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104604647579724}
+  m_Mesh: {fileID: 4300000, guid: dea6700515889954fb4d165b692183f2, type: 3}
 --- !u!33 &33931379271202734
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -4023,7 +4096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1.5
@@ -4038,7 +4110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1
@@ -4083,7 +4154,6 @@ MonoBehaviour:
   health2: {fileID: 1213378580009752}
   health3: {fileID: 1295362389100804}
   _currentHealth: 0
-  Health: {fileID: 0}
 --- !u!114 &114265349186088620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4125,7 +4195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1
@@ -4140,7 +4209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1
@@ -4172,10 +4240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryAttack: {fileID: 0}
   attackPoint: {fileID: 0}
-  speed: 0.25
-  sum: 0.25
-  DistanceTraveled: 20
-  DistanceAvailable: 40
+  speed: 0.1
+  sum: 0.1
+  DistanceTraveled: 10
+  DistanceAvailable: 20
   tempVector: {x: 0, y: 0, z: 0}
   Player: {fileID: 0}
 --- !u!114 &114582647133514834
@@ -4189,7 +4257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1
@@ -4219,7 +4286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49921a08cc3614024b556700909f92a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
   projectilePrefab: {fileID: 1300846738608890, guid: 216e382bb8c871e41844d0517fecbe06,
     type: 2}
   fireRate: 1.5

@@ -52,6 +52,7 @@ namespace TopDown
             _groundPlane = new Plane(Vector3.up, this.transform.position);
             limit = 20f;
             animScript = GetComponent<StandEnemyAnimationScript>();
+            Player = GameObject.FindWithTag("Player");
         }
 
         private void Update()
@@ -79,8 +80,10 @@ namespace TopDown
             if (primaryAttack == null) return;
 
             primaryAttack.Fire(attackPoint);
-
-            animScript.isFiring = true;
+            if (this.tag != "Boss_Cannon")
+            {
+                animScript.isFiring = true;
+            }
         }
 
         /// <summary>

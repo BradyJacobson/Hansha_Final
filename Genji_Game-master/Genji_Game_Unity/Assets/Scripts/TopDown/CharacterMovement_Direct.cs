@@ -66,6 +66,7 @@ namespace TopDown
         private PlayerHP _playerHPScript;
         private Vector3 lastPosition = Vector3.zero;
 
+
         void Start()
         {
             _animationScript = GetComponent<AnimationScript>();
@@ -119,7 +120,6 @@ namespace TopDown
                 }
 
                 if (!_characterController.isGrounded) _characterVelocity.y = Physics.gravity.y;
-
             }
         }
 
@@ -216,6 +216,7 @@ namespace TopDown
 
             }
         }
+
     }
 }
 

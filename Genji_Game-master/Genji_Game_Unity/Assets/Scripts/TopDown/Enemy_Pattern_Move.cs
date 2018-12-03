@@ -45,6 +45,7 @@ namespace TopDown
             _groundPlane = new Plane(Vector3.up, this.transform.position);
             limit = 10f;
             animScript = GetComponent<FollowGuyEnemyAnimationScript>();
+            Player = GameObject.FindWithTag("Player");
         }
 
         private void Update()
