@@ -41,12 +41,12 @@ public class PlayerHP : MonoBehaviour
         if (Checkpoints[CurrentCheckpoint])
         {
             Player.transform.position = Checkpoints[CurrentCheckpoint].transform.position;
-            Camera.transform.position = new Vector3(Checkpoints[CurrentCheckpoint].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 16, Checkpoints[CurrentCheckpoint].transform.position.z - 8f);
+            Camera.transform.position = new Vector3(Checkpoints[CurrentCheckpoint].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 19, Checkpoints[CurrentCheckpoint].transform.position.z - 8);
         }
         else
         {
             Player.transform.position = Checkpoints[0].transform.position;
-            Camera.transform.position = new Vector3(Checkpoints[0].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 16, Checkpoints[0].transform.position.z);
+            Camera.transform.position = new Vector3(Checkpoints[0].transform.position.x, Checkpoints[CurrentCheckpoint].transform.position.y + 19, Checkpoints[0].transform.position.z - 8);
         }
     }
 

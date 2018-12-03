@@ -12,6 +12,7 @@ public class BossHP : MonoBehaviour
     private float minus = -0.67f;
     public UnityEvent damageEvent;
     public UnityEvent deathEvent;
+    public GameObject Door;
 
     public GameObject health1, health2, health3;
 
@@ -37,6 +38,10 @@ public class BossHP : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            if (Door)
+            {
+                Door.GetComponent<Locked_Door>().LoseCharacter();
+            }
             PlayerDeath();
             _currentHealth = 0;
         }
