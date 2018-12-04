@@ -229,4 +229,4 @@ MonoBehaviour:
   projectileSpeed: 15
   damageAmount: 10
   damageFunctionName: DealDamage
-  timeToDie: 1.25
+  timeToDie: 1
