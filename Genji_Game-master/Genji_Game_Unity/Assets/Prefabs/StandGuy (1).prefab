@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 114042608745900576}
   m_Layer: 0
   m_Name: StandGuy (1)
-  m_TagString: Enemy
+  m_TagString: StandEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1793,8 +1793,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305072007542164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2726.0974, y: 3.34, z: -2717.9382}
+  m_LocalRotation: {x: -0.18787624, y: 0.8118275, z: -0.37856132, w: 0.40290207}
+  m_LocalPosition: {x: 1027.07, y: -2845.33, z: -2387.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4107304858599260}
@@ -2413,7 +2413,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Door: {fileID: 0}
-  DeathAnimTime: 0
+  DeathAnimTime: 3
 --- !u!114 &114507138228381226
 MonoBehaviour:
   m_ObjectHideFlags: 1

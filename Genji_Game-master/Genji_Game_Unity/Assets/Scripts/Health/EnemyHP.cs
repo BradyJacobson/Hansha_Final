@@ -17,9 +17,32 @@ public class EnemyHP : MonoBehaviour
 
     public float DeathAnimTime;
 
+    private FollowGuyEnemyAnimationScript followGuyAnimScript;
+    private StandEnemyAnimationScript standGuyAnimScript;
+
     public void Start()
     {
         _currentHealth = startingHealth;
+        if (this.tag == "FollowEnemy")
+        {
+            followGuyAnimScript = GetComponent<FollowGuyEnemyAnimationScript>();
+        }
+        else if(this.tag == "StandEnemy")
+        {
+            standGuyAnimScript = GetComponent<StandEnemyAnimationScript>();
+        }
+    }
+
+    void Update()
+    {
+        if (this.tag == "FollowEnemy")
+        {
+            followGuyAnimScript.currentHealth = _currentHealth;
+        }
+        else if (this.tag == "StandEnemy")
+        {
+            standGuyAnimScript.currentHealth = _currentHealth;
+        }
     }
 
     public void DealDamage(int damage)

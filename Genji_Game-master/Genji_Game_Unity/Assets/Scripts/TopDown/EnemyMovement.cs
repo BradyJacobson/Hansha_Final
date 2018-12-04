@@ -44,6 +44,8 @@ namespace TopDown
         private CharacterState state = CharacterState.idle;
         private StandEnemyAnimationScript animScript;
 
+        private Follow_Script followScript;
+
         private Plane _groundPlane;
 
         void Start()
@@ -53,11 +55,12 @@ namespace TopDown
             limit = 20f;
             animScript = GetComponent<StandEnemyAnimationScript>();
             Player = GameObject.FindWithTag("Player");
+            followScript = GetComponent<Follow_Script>();
         }
 
         private void Update()
         {
-            if(_canMove = true)
+            if(_canMove)
             {
                 tempVector = transform.position - Player.transform.position;
                 tempDirection = Mathf.Sqrt(Mathf.Pow(tempVector.x, 2) + Mathf.Pow(tempVector.z, 2));
@@ -80,7 +83,7 @@ namespace TopDown
             if (primaryAttack == null) return;
 
             primaryAttack.Fire(attackPoint);
-            if (this.tag != "Boss_Cannon")
+            if (this.tag == "StandEnemy")
             {
                 animScript.isFiring = true;
             }
@@ -99,6 +102,7 @@ namespace TopDown
             if (value)
             {
                 // _storedVelocity = _characterController.velocity;
+                followScript.target = null;
                 _characterVelocity = Vector3.zero;
             }
             else

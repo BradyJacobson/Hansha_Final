@@ -9,6 +9,8 @@ TagManager:
   - Deflect
   - Boss
   - Boss_Cannon
+  - StandEnemy
+  - FollowEnemy
   layers:
   - Default
   - TransparentFX

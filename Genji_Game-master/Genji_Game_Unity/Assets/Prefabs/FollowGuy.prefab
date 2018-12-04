@@ -1211,7 +1211,7 @@ GameObject:
   - component: {fileID: 114235534769426440}
   m_Layer: 0
   m_Name: FollowGuy
-  m_TagString: Enemy
+  m_TagString: FollowEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1836,9 +1836,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999421028374542}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2721.4, y: 3.76, z: -2727.966}
-  m_LocalScale: {x: 1.4888, y: 1.4888, z: 1.4888}
+  m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 984.3, y: -2768.8, z: -2327.8}
+  m_LocalScale: {x: 1.4888, y: 1.4888005, z: 1.4888}
   m_Children:
   - {fileID: 4827549890326410}
   - {fileID: 4034328312685674}
@@ -2514,7 +2514,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Door: {fileID: 0}
-  DeathAnimTime: 0
+  DeathAnimTime: 3
 --- !u!120 &120309607112867482
 LineRenderer:
   m_ObjectHideFlags: 1

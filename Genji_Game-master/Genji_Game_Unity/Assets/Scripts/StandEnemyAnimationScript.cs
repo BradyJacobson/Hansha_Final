@@ -26,5 +26,14 @@ public class StandEnemyAnimationScript : MonoBehaviour
         {
             anim.SetBool("bFiring", false);
         }
+
+        if(currentHealth > 0)
+        {
+            anim.SetBool("bDead", false);
+        }
+        else
+        {
+            anim.SetBool("bDead", true);
+        }
     }
 }

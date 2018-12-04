@@ -124,7 +124,6 @@ public class PlayerHP : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSeconds(DeathAnimTime);
-        Debug.Log("Death() was called");
         SceneManager.LoadScene(RestartScene);
     }
 }
