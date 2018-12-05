@@ -19,7 +19,6 @@ public class CheckPointInteraction : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && !activated)
         {
-            Debug.Log("SET " + Order);
             PlayerPrefs.SetInt("checkpoint", Order);
             activated = true;
             activationSound.Play();

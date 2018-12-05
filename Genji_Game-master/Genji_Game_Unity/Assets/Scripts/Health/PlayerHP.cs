@@ -31,8 +31,13 @@ public class PlayerHP : MonoBehaviour
 
     public List<GameObject> Checkpoints;
 
+    private GameObject screenFlashManager;
+
+
     public void Start()
     {
+        Player = GameObject.FindWithTag("Player");
+        screenFlashManager = GameObject.Find("ScreenFlashManager");
         _currentHealth = startingHealth;
         InvincibilityTime = 2f;
         CurrentCheckpoint = PlayerPrefs.GetInt("checkpoint");
@@ -104,6 +109,8 @@ public class PlayerHP : MonoBehaviour
             this.PlayerDeath();
             _currentHealth = 0;
         }
+
+        screenFlashManager.GetComponent<ScreenFlashManagerScript>().damaged = true;
     }
 
     public void PlayerDeath()

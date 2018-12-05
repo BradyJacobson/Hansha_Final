@@ -47,7 +47,6 @@ public class Projectile_Direct : Projectile
             }
             collision.gameObject.SendMessageUpwards(damageFunctionName, damageAmount, SendMessageOptions.DontRequireReceiver);
             Destroy(this.gameObject);
-            Debug.Log("SHOULD BE DED");
         }
 
 

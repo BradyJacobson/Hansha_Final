@@ -42,22 +42,20 @@ public class Player_Slash : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canSwing)
         {
-         //   deflectorMesh.SetActive(true);
             frontBoxCollider.SetActive(true);
             Active.SetActive(false);
             Inactive.SetActive(true);
             canSwing = false;
             isSwinging = true;
-            animScript.animScriptIsSwinging = this.isSwinging;
             frontBoxCollider.transform.position = player.transform.position;
             StartCoroutine(SwingTime());
             GameObject.Find("Swing_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
-
         }
 
         if (isSwinging)
         {
             frontBoxCollider.transform.position += (player.transform.forward * Time.deltaTime * 7);
+            animScript.animScriptIsSwinging = this.isSwinging;
         }
     }
 
