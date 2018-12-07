@@ -8,23 +8,35 @@ public class Weapon_Projectile : Weapon {
 
     public float fireRate = 0.25f;
 
-    private bool _canFire = true;
+    public bool _canFire = true;
+
+    private EnemyHP enemyHPScript;
+
+    void Start()
+    {
+        enemyHPScript = GetComponent<EnemyHP>(); 
+    }
 
     public override void Fire (Transform attackSpawnPoint)
     {
-        if (!_canFire) return;
+        if (_canFire)
+        {
 
-        GameObject projectile = (GameObject)Instantiate(projectilePrefab, attackSpawnPoint.position, attackSpawnPoint.rotation, null);
+            GameObject projectile = (GameObject)Instantiate(projectilePrefab, attackSpawnPoint.position, attackSpawnPoint.rotation, null);
 
-        _canFire = false;
+            _canFire = false;
 
-        StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackCooldown());
+        }
     }
 
     IEnumerator AttackCooldown ()
     {
         yield return new WaitForSeconds(fireRate);
 
-        _canFire = true;
+        if (enemyHPScript._currentHealth > 0)
+        {
+            _canFire = true;
+        }
     }
 }

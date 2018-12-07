@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,13 +13,14 @@ public class EnemyHP : MonoBehaviour
     public UnityEvent deathEvent;
     public GameObject Door;
 
-    private int _currentHealth;
+    public int _currentHealth;
     private bool _canTakeDamage = true;
 
     public float DeathAnimTime;
 
     private FollowGuyEnemyAnimationScript followGuyAnimScript;
     private StandEnemyAnimationScript standGuyAnimScript;
+    private Weapon_Projectile weaponProjectileScript;
 
     public void Start()
     {
@@ -30,6 +32,10 @@ public class EnemyHP : MonoBehaviour
         else if(this.tag == "StandEnemy")
         {
             standGuyAnimScript = GetComponent<StandEnemyAnimationScript>();
+        }
+        else if(this.tag == "Enemy_Turret")
+        {
+            weaponProjectileScript = GetComponent<Weapon_Projectile>();
         }
     }
 
@@ -60,8 +66,16 @@ public class EnemyHP : MonoBehaviour
             {
                 Door.GetComponent<Locked_Door>().LoseCharacter();
             }
-            PlayerDeath();
-            _currentHealth = 0;
+            if (this.tag == "Enemy_Turret")
+            {
+                _currentHealth = 0;
+                deathEvent.Invoke();
+            }
+            else
+            {
+                PlayerDeath();
+                _currentHealth = 0;
+            }
         }
     }
 
