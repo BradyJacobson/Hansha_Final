@@ -25,7 +25,6 @@ public class Weapon_Projectile : Weapon {
             GameObject projectile = (GameObject)Instantiate(projectilePrefab, attackSpawnPoint.position, attackSpawnPoint.rotation, null);
 
             _canFire = false;
-
             StartCoroutine(AttackCooldown());
         }
     }
@@ -33,7 +32,6 @@ public class Weapon_Projectile : Weapon {
     IEnumerator AttackCooldown ()
     {
         yield return new WaitForSeconds(fireRate);
-
         if (enemyHPScript._currentHealth > 0)
         {
             _canFire = true;

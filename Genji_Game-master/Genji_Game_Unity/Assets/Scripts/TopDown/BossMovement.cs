@@ -29,7 +29,7 @@ namespace TopDown
         public float speed = .05f, sum = 0.05f, DistanceTraveled, DistanceAvailable;
         public Vector3 tempVector;
         public GameObject Player;
-        private bool _canAttack = true;
+        public bool _canAttack = true;
 
         private Plane _groundPlane;
 

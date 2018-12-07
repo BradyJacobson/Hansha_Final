@@ -60,17 +60,18 @@ namespace TopDown
             {
                 moveEnemy();
             }
-            if (_canAttack)
-            {
-                Attack();
-            }
         }  
 
         private void Attack()
         {
-            if (primaryAttack == null)
-                return;
-            primaryAttack.Fire(attackPoint);
+            //tempVector2 = transform.position - Player.transform.position;
+            //tempDirection2 = Mathf.Sqrt(Mathf.Pow(tempVector2.x, 2) + Mathf.Pow(tempVector2.z, 2));
+            //if (tempDirection2 <= limit)
+            //{
+                if (primaryAttack == null)
+                    return;
+                primaryAttack.Fire(attackPoint);
+            //}
 
         }
 
@@ -125,6 +126,10 @@ namespace TopDown
                 else if (tempVector.z < 0)
                 {
                     transform.position += new Vector3(0, 0, speed);
+                }
+                if (_canAttack)
+                {
+                    Attack();
                 }
             }
             else

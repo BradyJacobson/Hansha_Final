@@ -35,7 +35,7 @@ namespace TopDown
         private float tempDirection;
         public float limit;
         private bool _canAim = true;
-        private bool _canAttack = true;
+        public bool _canAttack = true;
         private bool _canMove = true;
 
         public GameObject Player;
