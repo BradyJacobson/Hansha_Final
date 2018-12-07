@@ -11,6 +11,7 @@ TagManager:
   - Boss_Cannon
   - StandEnemy
   - FollowEnemy
+  - Enemy_Turret
   layers:
   - Default
   - TransparentFX
