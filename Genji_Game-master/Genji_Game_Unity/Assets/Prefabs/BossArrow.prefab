@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23300341495828120}
   - component: {fileID: 114610322871404142}
   - component: {fileID: 65568618424754440}
-  - component: {fileID: 96193642600396610}
+  - component: {fileID: 96011278534351970}
   m_Layer: 0
   m_Name: BossArrow
   m_TagString: Projectile
@@ -114,7 +114,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.021841465, y: 0.006823616, z: 0.17916678}
   m_Center: {x: -0.0010111602, y: -5.820766e-10, z: 0.004233338}
---- !u!96 &96193642600396610
+--- !u!96 &96011278534351970
 TrailRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -122,15 +122,15 @@ TrailRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293361799058112}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b091a6d1cf5392845ba2a1d4a4e083bd, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,7 +150,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.25
+  m_Time: 2
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -180,7 +180,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.03962233, g: 0.67058825, b: 0.015686255, a: 1}
+      key0: {r: 0.6698113, g: 0.015797434, b: 0.015797434, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

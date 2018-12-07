@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player_Slash : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Player_Slash : MonoBehaviour
     public GameObject frontBoxCollider;
     public GameObject player;
     public GameObject deflectorMesh;
+
+    public UnityEvent swingEvent;
 
     [Header("UI Properties")]
     public GameObject Active;
@@ -50,6 +53,7 @@ public class Player_Slash : MonoBehaviour
             frontBoxCollider.transform.position = player.transform.position;
             StartCoroutine(SwingTime());
             GameObject.Find("Swing_Sounds").GetComponents<AudioSource>()[Random.Range(0, 3)].Play();
+            swingEvent.Invoke();
         }
 
         if (isSwinging)
