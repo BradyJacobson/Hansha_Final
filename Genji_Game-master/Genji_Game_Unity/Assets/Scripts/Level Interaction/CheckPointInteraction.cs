@@ -20,7 +20,7 @@ public class CheckPointInteraction : MonoBehaviour
         if(collision.gameObject.tag == "Player" && !activated)
         {
             PlayerPrefs.SetInt("checkpoint", Order);
-            activated = true;
+           // activated = true;
             activationSound.Play();
         }
     }
