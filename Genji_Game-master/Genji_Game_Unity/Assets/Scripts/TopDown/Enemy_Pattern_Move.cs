@@ -29,6 +29,7 @@ namespace TopDown
         public float speed = .05f,tempDirection,limit;
         public Vector3 tempVector;
         public GameObject Player;
+
         private bool _canAttack = true;
 
         private Plane _groundPlane;
@@ -43,7 +44,6 @@ namespace TopDown
         {
             rb = GetComponent<Rigidbody>();
             _groundPlane = new Plane(Vector3.up, this.transform.position);
-            limit = 10f;
             animScript = GetComponent<FollowGuyEnemyAnimationScript>();
             Player = GameObject.FindWithTag("Player");
         }
@@ -60,12 +60,18 @@ namespace TopDown
             {
                 moveEnemy();
             }
+            if (_canAttack)
+            {
+                Attack();
+            }
         }  
 
         private void Attack()
         {
-            if (primaryAttack == null) return;
+            if (primaryAttack == null)
+                return;
             primaryAttack.Fire(attackPoint);
+
         }
 
         /// <summary>
