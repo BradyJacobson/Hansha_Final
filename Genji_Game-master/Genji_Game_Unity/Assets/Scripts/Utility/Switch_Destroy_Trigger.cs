@@ -20,6 +20,8 @@ public class Switch_Destroy_Trigger : MonoBehaviour {
 
             this.gameObject.transform.Rotate(0, 180, 0);
 
+            GameObject.Find("Switch_Sound").GetComponent<AudioSource>().Play();
+
             Debug.Log("Move", this);
 
             if (willDestroy == true)
